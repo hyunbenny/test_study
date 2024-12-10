@@ -3,7 +3,7 @@ package com.hyunbenny.test;
 import com.hyunbenny.test.article.application.port.out.CommandArticlePort;
 import com.hyunbenny.test.article.application.port.out.LoadArticlePort;
 import com.hyunbenny.test.article.application.port.out.LoadBoardPort;
-import com.hyunbenny.test.article.application.service.ArticleFixtures;
+import com.hyunbenny.test.testFixtures.ArticleFixtures;
 import com.hyunbenny.test.article.application.service.ArticleService;
 import org.assertj.core.api.BDDAssertions;
 import org.junit.jupiter.api.BeforeEach;

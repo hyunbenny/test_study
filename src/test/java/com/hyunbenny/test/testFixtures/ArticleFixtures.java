@@ -1,4 +1,4 @@
-package com.hyunbenny.test.article.application.service;
+package com.hyunbenny.test.testFixtures;
 
 import com.hyunbenny.test.article.domain.Article;
 import com.hyunbenny.test.article.domain.Board;
