@@ -29,7 +29,7 @@ public class AssertJTest {
                 .username("user")
                 .subject("subject")
                 .content("content")
-                .createdDate(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .build();
 
         // when
@@ -68,7 +68,7 @@ public class AssertJTest {
                 .username("user")
                 .subject("subject")
                 .content("content")
-                .createdDate(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .build();
 
         // when

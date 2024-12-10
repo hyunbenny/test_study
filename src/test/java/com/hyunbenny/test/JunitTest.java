@@ -60,7 +60,7 @@ public class JunitTest {
                 .subject("subject")
                 .content("content")
                 .board(board)
-                .createdDate(LocalDateTime.now())
+                .createdAt(LocalDateTime.now())
                 .build();
 
 
@@ -70,7 +70,7 @@ public class JunitTest {
         assertEquals("subject", article.getSubject());
         assertEquals("content", article.getContent());
         assertNotEquals("contentttt", article.getContent());
-        assertNotNull(article.getCreatedDate());
+        assertNotNull(article.getCreatedAt());
 
     }
 

@@ -13,7 +13,7 @@ public class Article {
     private String subject;
     private String content;
     private String username;
-    private LocalDateTime createdDate;
+    private LocalDateTime createdAt;
 
     public void update(String subject, String content) {
         this.subject = subject;
