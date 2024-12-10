@@ -1,11 +1,14 @@
 package com.hyunbenny.test.common.api;
 
+import com.hyunbenny.test.common.api.dto.ErrorMessage;
 import com.hyunbenny.test.common.exception.AccessDeniedException;
 import com.hyunbenny.test.common.exception.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+
+import java.time.LocalDateTime;
 
 @RestControllerAdvice
 public class GlobalControllerAdvice {
