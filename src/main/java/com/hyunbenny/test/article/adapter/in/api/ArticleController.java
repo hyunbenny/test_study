@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("articles")
+@RequestMapping("/articles")
 public class ArticleController {
     private final GetArticleUseCase getArticleUseCase;
     private final CreateArticleUseCase createArticleUseCase;
@@ -27,15 +27,15 @@ public class ArticleController {
         this.deleteArticleUseCase = deleteArticleUseCase;
     }
 
-    @GetMapping("{articleId}")
-    ArticleDto.ArticleResponse getArticle(@PathVariable Long articleId) {
+    @GetMapping("/{articleId}")
+    ArticleDto.ArticleResponse getArticle(@PathVariable("articleId") Long articleId) {
         var article = getArticleUseCase.getArticleById(articleId);
 
         return ArticleDto.ArticleResponse.of(article);
     }
 
     @GetMapping(params = "boardId")
-    List<ArticleDto.ArticleResponse> listArticlesByBoard(@RequestParam Long boardId) {
+    List<ArticleDto.ArticleResponse> listArticlesByBoard(@RequestParam("boardId") Long boardId) {
         return getArticleUseCase.getArticlesByBoard(boardId).stream()
                 .map(ArticleDto.ArticleResponse::of)
                 .toList();
@@ -53,8 +53,8 @@ public class ArticleController {
         return new CommandResponse(article.getId());
     }
 
-    @DeleteMapping("{articleId}")
-    void deleteArticled(@PathVariable Long articleId) {
+    @DeleteMapping("/{articleId}")
+    void deleteArticled(@PathVariable("articleId") Long articleId) {
         deleteArticleUseCase.deleteArticle(articleId);
     }
 }
